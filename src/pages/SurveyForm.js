@@ -29,7 +29,14 @@ const SurveyForm = (props) =>{
             }
         },
         onError(err){
-            setErrors(err.graphQLErrors[0].extensions.exception.errors)
+            if (err.graphQLErrors[0] !== undefined)
+                setErrors(err.graphQLErrors[0].extensions.exception.errors)
+            else{
+                setErrors({
+                    error: "Bad Network"
+                })
+            }
+            // console.log(err.graphQLErrors)
         },
         variables: value
     })
@@ -40,19 +47,27 @@ const SurveyForm = (props) =>{
 
     return(
         <Segment inverted color="teal">
+            <Menu secondary size="massive" fluid widths={3}>
+                <Menu.Item>
+                    <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/fb-image-icon.png?alt=media" />
+                </Menu.Item>
+                <Menu.Item>
+                <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
+                    <div>SDI CLUB</div>
+                </Menu.Item>
+                <Menu.Item>
+                    <img style={{background: 'teal'}} alt="img_2" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/bitlogo.png?alt=media" />
+                </Menu.Item>
+            </Menu>
             <Menu secondary size="massive" fluid widths={4}>
                 <Menu.Item>
-                    <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
-                    <div>SDI CLUB</div>
+                    
                 </Menu.Item>
                 <Menu.Item>
                     Competitive Coding Competition
                 </Menu.Item>
                 <Menu.Item>
-                    <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/fb-image-icon.png?alt=media" />
-                </Menu.Item>
-                <Menu.Item>
-                    <img alt="img_2" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/bitlogo.png?alt=media" />
+                    
                 </Menu.Item>
             </Menu>
             <Grid>

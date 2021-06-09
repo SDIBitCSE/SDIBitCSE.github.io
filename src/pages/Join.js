@@ -4,10 +4,11 @@ import { Segment } from 'semantic-ui-react';
 const Join =() =>{
     return(
         <Segment color="teal">
-            <div>
-                TO JOIN SDI:
-                Click here:
-            </div>
+            <h2>
+                To JOIN SDI: <br />
+                <b>
+                <a href="https://chat.whatsapp.com/JA8WBVjjHi45dDFw1sDNh6" target="_blank" rel="noopener noreferrer">Click Here</a></b>
+            </h2>
         </Segment>
     )
 }
