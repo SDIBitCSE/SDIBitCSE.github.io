@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Grid, Segment } from 'semantic-ui-react'
+import { Form, Button, Grid, Segment, Menu } from 'semantic-ui-react'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useForm } from '../utils/hooks'
@@ -40,7 +40,21 @@ const SurveyForm = (props) =>{
 
     return(
         <Segment inverted color="teal">
-            <h1>Survey</h1>
+            <Menu secondary size="massive" fluid widths={4}>
+                <Menu.Item>
+                    <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
+                    <div>SDI CLUB</div>
+                </Menu.Item>
+                <Menu.Item>
+                    Competitive Coding Competition
+                </Menu.Item>
+                <Menu.Item>
+                    <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/fb-image-icon.png?alt=media" />
+                </Menu.Item>
+                <Menu.Item>
+                    <img alt="img_2" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/bitlogo.png?alt=media" />
+                </Menu.Item>
+            </Menu>
             <Grid>
                 <Grid.Row centered >
                     <Grid.Column width={10}>
@@ -69,6 +83,8 @@ const SurveyForm = (props) =>{
                             type="text"
                             value={value.phone}
                             onChange={onChange}
+                            maxLength="10"
+                            minLength="10"
                         />
                         <Form.Input
                             label="College"
@@ -93,6 +109,8 @@ const SurveyForm = (props) =>{
                             type="text"
                             value={value.whatsapp}
                             onChange={onChange}
+                            maxLength="10"
+                            minLength="10"
                         />
                         <Form.Input
                             label="Branch"
@@ -109,6 +127,8 @@ const SurveyForm = (props) =>{
                             type="text"
                             value={value.semester}
                             onChange={onChange}
+                            maxLength="1"
+                            minLength="1"
                         />
                         <Button type='submit' color="blue">Submit</Button>
                     </Form>
