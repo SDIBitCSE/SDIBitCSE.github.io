@@ -3,7 +3,7 @@ import { Segment } from 'semantic-ui-react'
 
 function Submitted(){
     return(
-        <Segment size="massive">
+        <Segment size="massive" color="teal">
             <h2>
                 Please Pay Rs 20 to UPI<br />
                 9001959788 (Sachin Kumar)

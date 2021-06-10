@@ -6,7 +6,9 @@ import { Container } from 'semantic-ui-react'
 import SurveyForm from './pages/SurveyForm'
 import Join from './pages/Join'
 import Submitted from './pages/Submitted'
+import Admin from './pages/Admin'
 import './App.css'
+import UserData from './components/UserData'
 
 function App(){
     return(
@@ -15,6 +17,8 @@ function App(){
                 <Route exact path = '/' component={SurveyForm} />
                 <Route exact path='/join' component={Join} />
                 <Route exact path='/submitted' component={Submitted} />
+                <Route exact path='/sdiclubadmin' component={Admin} />
+                <Route exact path='/userdata' component={UserData} />
             </Container>
         </Router>
     )

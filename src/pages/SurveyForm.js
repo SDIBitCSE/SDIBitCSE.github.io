@@ -33,7 +33,7 @@ const SurveyForm = (props) =>{
                 setErrors(err.graphQLErrors[0].extensions.exception.errors)
             else{
                 setErrors({
-                    error: "Bad Network"
+                    error: "Server Error Try Again"
                 })
             }
             // console.log(err.graphQLErrors)
