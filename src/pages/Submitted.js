@@ -6,7 +6,7 @@ function Submitted(){
         <Segment size="massive" color="teal">
             <h2>
                 Please Pay Rs 20 to UPI<br />
-                9001959788 (Sachin Kumar)
+                7597477435 (Akhil)
             </h2>
         </Segment>
     )
