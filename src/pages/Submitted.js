@@ -5,8 +5,9 @@ function Submitted(){
     return(
         <Segment size="massive" color="teal">
             <h2>
-                Please Pay Rs 20 to UPI<br />
-                7597477435 (Akhil)
+                Registered Successfully. Please pay 20/- using UPI 7597477435 (Akhil) to complete your registration.<br />
+                Please send the screenshot on whatsapp 7597477435.
+                Thank You.
             </h2>
         </Segment>
     )

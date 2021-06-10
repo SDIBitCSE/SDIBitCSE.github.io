@@ -9,7 +9,7 @@ const Join =() =>{
         <Submitted />
         <Segment color="teal">
             <h2>
-                To JOIN SDI: <br />
+                To JOIN SDI Club: <br />
                 <b>
                 <a href="https://chat.whatsapp.com/JA8WBVjjHi45dDFw1sDNh6" target="_blank" rel="noopener noreferrer">Click Here</a></b>
             </h2>
