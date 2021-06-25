@@ -3,6 +3,7 @@ import { Form, Button, Grid, Segment, Menu } from 'semantic-ui-react'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useForm } from '../utils/hooks'
+import '../App.css';
 
 const SurveyForm = (props) =>{
     const [errors, setErrors] = useState({})
@@ -11,9 +12,9 @@ const SurveyForm = (props) =>{
         name: '',
         phone: '',
         college: '',
-        codechef_id: '',
         whatsapp: '',
         branch: '',
+        usn:'',
         semester: '',
         email: ''
     })
@@ -29,8 +30,10 @@ const SurveyForm = (props) =>{
             }
         },
         onError(err){
-            if (err.graphQLErrors[0] !== undefined)
+            if (err.graphQLErrors[0] !== undefined){
+                console.log(err.graphQLErrors[0])
                 setErrors(err.graphQLErrors[0].extensions.exception.errors)
+            }
             else{
                 setErrors({
                     error: "Server Error Try Again"
@@ -47,24 +50,21 @@ const SurveyForm = (props) =>{
 
     return(
         <Segment inverted color="teal">
-            <Menu secondary size="massive" fluid widths={3}>
-                <Menu.Item>
-                    <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/fb-image-icon.png?alt=media" />
-                </Menu.Item>
-                <Menu.Item>
+            <div>
+                <div id="rota_logo">
+                <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/title_logo.png?alt=media" />
+                </div>
+                <div id="sdi_logo">
                 <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
                     <div>SDI CLUB</div>
-                </Menu.Item>
-                <Menu.Item>
-                    <img style={{background: 'teal'}} alt="img_2" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/bitlogo.png?alt=media" />
-                </Menu.Item>
-            </Menu>
+                </div>
+            </div>
             <Menu secondary size="massive" fluid widths={4}>
                 <Menu.Item>
                     
                 </Menu.Item>
                 <Menu.Item>
-                    Competitive Coding Competition
+                Discord Event Registration
                 </Menu.Item>
                 <Menu.Item>
                     
@@ -110,11 +110,11 @@ const SurveyForm = (props) =>{
                             onChange={onChange}
                         />
                         <Form.Input
-                            label="Codechef Id"
-                            placeholder="Codechef Id"
-                            name="codechef_id"
+                            label="Usn"
+                            placeholder="Usn"
+                            name="usn"
                             type="text"
-                            value={value.codechef_id}
+                            value={value.usn}
                             onChange={onChange}
                         />
                         <Form.Input
@@ -168,7 +168,7 @@ const REGISTER_USER = gql`
         $name: String!
         $phone: String!
         $college: String!
-        $codechef_id: String!
+        $usn: String!
         $whatsapp: String
         $branch: String!
         $semester: String!
@@ -179,7 +179,7 @@ const REGISTER_USER = gql`
                 name: $name
                 phone: $phone
                 college: $college
-                codechef_id: $codechef_id
+                usn: $usn
                 whatsapp: $whatsapp
                 branch: $branch
                 semester: $semester
