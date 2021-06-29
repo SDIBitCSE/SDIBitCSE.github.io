@@ -58,6 +58,9 @@ const SurveyForm = (props) =>{
                 <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
                     <div>SDI CLUB</div>
                 </div>
+                <div id="bit_logo">
+                    <img alt="" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/bitlogo.png?alt=media" />
+                </div>
             </div>
             <Menu secondary size="massive" fluid widths={4}>
                 <Menu.Item>
