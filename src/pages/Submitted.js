@@ -5,7 +5,8 @@ function Submitted(){
     return(
         <Segment size="massive" color="teal">
             <h2>
-                Registered Successfully. Please pay Rs. 30 through UPI at:: akhilsinghal6467@ybl<br />
+                Registered Successfully. Please pay Rs. 30 through UPI at::<br />
+                akhilsinghal6467@ybl<br />
                 Thank You.
             </h2>
         </Segment>
