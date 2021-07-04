@@ -22,7 +22,7 @@ const SurveyForm = (props) =>{
     const [addUser, {loading}] = useMutation(REGISTER_USER, {
         update(proxy, {data: {createSurvey: userData}}){
             if(userData.college.toLowerCase() === 'bangalore institute of technology' && (userData.branch.toLowerCase() === 'computer science and enginerring' || userData.branch.toLowerCase() === 'cse' || userData.branch.toLowerCase() === 'computer science')){
-                props.history.push('/join')
+                props.history.push('/submitted')
 
             }else{
                 // console.log(userData.college.toLowerCase())
@@ -51,9 +51,9 @@ const SurveyForm = (props) =>{
     return(
         <Segment inverted color="teal">
             <div>
-                <div id="rota_logo">
+                {/* <div id="rota_logo">
                 <img style={{background: 'white'}} alt="img_3" src="https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/title_logo.png?alt=media" />
-                </div>
+                </div> */}
                 <div id="sdi_logo">
                 <img alt="img" src='https://firebasestorage.googleapis.com/v0/b/fir-a11e8.appspot.com/o/Untitled%20design.png?alt=media' />
                     <div>SDI CLUB</div>
@@ -67,7 +67,7 @@ const SurveyForm = (props) =>{
                     
                 </Menu.Item>
                 <Menu.Item>
-                Discord Event Registration
+                Quiz of Mistakes
                 </Menu.Item>
                 <Menu.Item>
                     

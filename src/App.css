@@ -2,7 +2,7 @@
     position: relative;
     top:3%;
     width: 10%;
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 #rota_logo img{
@@ -15,13 +15,13 @@
 #sdi_logo div{
     color: black;
     position: relative;
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 #bit_logo img{
     position: absolute;
     top: 2%;
-    left: 40%;
+    left: 65%;
     width: 9%;
 }
 
